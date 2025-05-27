@@ -304,25 +304,5 @@
 </footer>
 <!-- Add JavaScript here -->
 <script src="scripts.js"></script>
-<script>
-  // Load video from URL param
-  const urlParams = new URLSearchParams(window.location.search);
-  const videoUrl = urlParams.get('video');
-  if (videoUrl) {
-    document.getElementById('videoSource').src = videoUrl;
-    document.querySelector('video').load();
-  }
-</script>
-<!--<script>
-  function openForm(type) {
-    document.getElementById("form-title").textContent = type.charAt(0).toUpperCase() + type.slice(1) + " Login";
-    document.getElementById("form-modal").style.display = "block";
-  }
-  
-  function closeForm() {
-    document.getElementById("form-modal").style.display = "none";
-  }
-  </script>-->
-  
 </body>
 </html>

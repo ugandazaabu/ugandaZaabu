@@ -105,89 +105,9 @@
 </footer>
 <!-- Add JavaScript here -->
 <script src="scripts.js"></script>
-<style>
-  .video-card {
-    max-width: 800px;
-    margin: 20px auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  }
-  .video-title {
-    padding: 10px;
-    font-weight: bold;
-    background: #f9f9f9;
-  }
-  </style>
+
   
-<script>
-  
-  function openForm(type) {
-    if (type === 'premium') {
-      const isLoggedIn = sessionStorage.getItem("isLoggedIn") === "true";
 
-      if (isLoggedIn) {
-        window.location.href = "premium.html";
-      } else {
-        document.getElementById("form-title").textContent = "Login to access Premium";
-        document.getElementById("form-modal").style.display = "block";
-      }
-    } else {
-      document.getElementById("form-title").textContent = type.charAt(0).toUpperCase() + type.slice(1) + " Login";
-      document.getElementById("form-modal").style.display = "block";
-    }
-  }
-
-  function handleLogin(event) {
-    event.preventDefault();
-    sessionStorage.setItem("isLoggedIn", "true");
-    document.getElementById("form-modal").style.display = "none";
-    window.location.href = "premium.html";
-  }
-
-  function closeForm() {
-    document.getElementById("form-modal").style.display = "none";
-  }
-</script>
-<script>
-  const ads = [
-    {
-      title: "Chat & Meet Hot Singles",
-      image: "ad1.jpg",
-      link: "https://your-ad-link1.com"
-    },
-    {
-      title: "Buy Herbal Remedies",
-      image: "ad2.jpg",
-      link: "https://your-ad-link2.com"
-    },
-    {
-      title: "Crypto Investments Guide",
-      image: "ad3.jpg",
-      link: "https://your-ad-link3.com"
-    },
-    {
-      title: "shop now",
-      image: "ad4.jpg",
-      link: "https://your-ad-link3.com"
-    }
-  ];
-
-  const adContainer = document.getElementById("ads-container");
-
-  ads.forEach(ad => {
-    const card = document.createElement("div");
-    card.className = "ad-card";
-    card.innerHTML = `
-      <img src="${ad.image}" alt="Ad">
-      <h4>${ad.title}</h4>
-      <a href="${ad.link}" target="_blank">Learn More</a>
-    `;
-    adContainer.appendChild(card);
-  });
-</script>
 
 </body>
 </html>
