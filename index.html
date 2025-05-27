@@ -79,10 +79,11 @@
   </div>
 <main>
   <div class="video-grid">
-    <a href="https://streamtape.com/v/qMGwLqY1KzTzJMJ/screeming_and_shouting_girlfriend_from_fortportal_uganda_240p.mp4" class="video-card">
-      <img src="https://via.placeholder.com/300x200?text=Hope+Video" alt="Hope Video">
+    <div class="video-card">
+      <iframe src="https://streamtape.com/e/qMGwLqY1KzTzJMJ/" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
       <div class="video-title">video1</div>
-    </a>
+    </div>
+    
     <a href="play.html?video=https://example.com/video1.mp4" class="video-card">
         <img src="https://via.placeholder.com/300x200?text=Hope+Video" alt="Hope Video">
         <div class="video-title">video2</div>
@@ -104,6 +105,23 @@
 </footer>
 <!-- Add JavaScript here -->
 <script src="scripts.js"></script>
+<style>
+  .video-card {
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  .video-title {
+    padding: 10px;
+    font-weight: bold;
+    background: #f9f9f9;
+  }
+  </style>
+  
 <script>
   
   function openForm(type) {
