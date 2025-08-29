@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1 id="videoTitle">Video Player</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <main>
+        <h2 id="videoTitle" style="text-align:center;"></h2>
+        <div id="videoContainer" style="display:flex; justify-content:center; margin-top:1rem;"></div>
+      </main>
+      
+      <script>
+        const params = new URLSearchParams(window.location.search);
+        const videoSrc = params.get("src");
+        const videoTitle = params.get("title");
+      
+        document.getElementById("videoTitle").innerText = decodeURIComponent(videoTitle);
+      
+        if(videoSrc){
+          const iframe = document.createElement('iframe');
+          iframe.width = "640";
+          iframe.height = "360";
+          iframe.src = videoSrc;
+          iframe.frameBorder = "0";
+          iframe.allowFullscreen = true;
+          document.getElementById('videoContainer').appendChild(iframe);
+        }
+      </script>
+      
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 UgandaZaabu</p>
+  </footer>
+
+
+</body>
+</html>
